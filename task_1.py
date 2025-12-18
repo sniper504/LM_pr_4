@@ -7,11 +7,11 @@ models = models.Sequential([
 
 weights = np.full((5,3),0.5)
 biases =np.zeros(3)
-models.layers[0].set_weights([w,b])
+models.layers[0].set_weights([weights,biases])
 x = np.array([1,2,3,4,5], [0,1,0,1,0])
 y = models.predict(x)
-print("Enters:" x)
-print("Outputs:" y)
+print("Enters:", x)
+print("Outputs:", y)
 weights, biases = models.layers[0].get_weights()
 
 print(biases.shape)
